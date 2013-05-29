@@ -4,13 +4,9 @@ class UsersController < ApplicationController
   before_filter :correct_user,   only: [:edit, :update]
   before_filter :admin_user,     only: :destroy
 
-  def search
-    @uno = User.find(params[:search])
-    redirect_to root_path
-  end
-
   def index
-    @users = User.paginate(page: params[:page])
+    @search = User.search(params[:search])
+    @users = @search.paginate(page: params[:page])
   end
 
   def show

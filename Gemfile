@@ -9,6 +9,10 @@ gem 'bootstrap-will_paginate', '0.0.6'
 gem 'jquery-rails', '2.0.2'
 
 gem "rails_autolink", "~> 1.1.0"
+gem "meta_search", "~> 1.1.3"
+gem "twitter-text", "~> 1.6.1"
+#gem "acts_as_votable", "~> 0.5.0"
+gem "thumbs_up", "~> 0.6.4"
 
 group :development, :test do
   gem 'sqlite3', '1.3.5'
@@ -38,5 +42,5 @@ group :test do
 end
 
 group :production do
-  gem 'pg', '0.12.2'
+  gem 'pg', '~> 0.15.1'
 end

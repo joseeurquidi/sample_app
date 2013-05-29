@@ -1,11 +1,11 @@
 <% provide(:title, 'All users') %>
 <h1>All users</h1>
 
-<%= form_tag do %>
+<%= form_for @search do |f| %>
 
-	<%= label_tag :search %>
-	<%= text_field_tag 'search', @search, :placeholder => 'Write the search' %>
-	<%= submit_tag "Search", :class => "btn btn-large btn-primary"  %>
+	<%= f.label :name_contains %>
+	<%= f.text_field :name_contains, :placeholder => 'Write the search' %>
+	<%= f.submit "Search", :class => "btn btn-large btn-primary"  %>
 
 <%end%>
 
